@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aerolineas Coder</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="avion.jpg">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body background="aerolinascoder.jpg" onload="getNombresPaises()">
+    <section class="form-registro">
+        <h4>¿Listo para tu nueva aventura?</h4>
+        <select class="controles" name="Paisorigen" id="PaisOrigen">
+            <option>Seleccione pais de origen</option>   
+        </select> 
+        <select class="controles" name="Paisdestino" id="PaisDestino">
+            <option>Seleccione pais de destino</option>
+        </select>
+        <select class="controles" name="clase" id="clase" >
+            <option value="ECO">Economica</option>
+            <option value="BUSINESS">Business</option>
+            <option value="VIP">Vip</option>
+        </select>
+        <input class="controlesInput" type="number" name="equipaje" id="equipaje" placeholder="Ingrese cantidad de equipaje">
+        <input class="controlesInput" type="number" name="dias" id="dias" placeholder="Ingrese cantidad de dias">
+        
+        <p>Estoy de acuerdo con <a href="terminos.html" target="blank">Terminos y condiciones</a><input type="checkbox"></p> 
+        <button id="consultar" class="boton" type="submit" value="Consultar">Consultar</button>
+        <button class="boton" type="button" id="verListado" value="Ver listado">Ver listado</button>
+        <button onclick="window.location.href='index.html'" class="boton boton--gris" value="Iniciar sesion">Cerrar sesion</button>
+    </section>
+    <script src="panel.js"></script> 
+       
+</body>
+</html>
