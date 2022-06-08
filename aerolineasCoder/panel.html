@@ -9,7 +9,14 @@
     <link rel="icon" type="image/jpg" href="avion.jpg">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
-<body background="aerolinascoder.jpg" onload="getNombresPaises()">
+<body onload="getNombresPaises()">
+    <style>
+		body{
+			background-image:url('aerolinascoder.jpg');
+    	    background-repeat: no-repeat;
+            background-size: cover;
+		}	
+	</style>
     <section class="form-registro">
         <h4>¿Listo para tu nueva aventura?</h4>
         <select class="controles" name="Paisorigen" id="PaisOrigen">
@@ -28,7 +35,7 @@
         
         <p>Estoy de acuerdo con <a href="terminos.html" target="blank">Terminos y condiciones</a><input type="checkbox"></p> 
         <button id="consultar" class="boton" type="submit" value="Consultar">Consultar</button>
-        <button class="boton" type="button" id="verListado" value="Ver listado">Ver listado</button>
+        <!--<button class="boton" type="button" id="verListado" value="Ver listado">Ver listado</button> -->
         <button onclick="window.location.href='index.html'" class="boton boton--gris" value="Iniciar sesion">Cerrar sesion</button>
     </section>
     <script src="panel.js"></script> 

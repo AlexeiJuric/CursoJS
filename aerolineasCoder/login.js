@@ -14,12 +14,26 @@ document.getElementById("login").addEventListener("click",() => {
         }
     } else { 
         //Si el username no se encuentra, le preguntamos si quiere agregarlo.
-        var answer = confirm("Su Id y pass no se encuentran registrado desea guardarlos");
-        if (answer) {
-            localStorage.setItem(username,clave);
-            //createUsuario(username, []);
-            document.getElementById("username").value = "";
-            document.getElementById("key").value = "";
-        }
+        swal({
+            title: "¿Deseas registrarte?",
+            text: "Tu Username o tu contraseña no se han encontrado", 
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+                localStorage.setItem(username,clave);
+                //createUsuario(username, []);
+                document.getElementById("username").value = "";
+                document.getElementById("key").value = "";
+                swal("Tu cuenta ha sido creada! ¿Listo para tu viaje?", {
+                icon: "success",
+              });
+            } else {
+              swal("Registrate para ingresar");
+            }
+          });
+        
     }
 })
